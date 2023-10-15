@@ -11,21 +11,45 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 
-<body class="d-flex flex-column min-vh-100 text-white" id="box">
+<body class="bg d-flex flex-column min-vh-100 " id="box">
 
-    <!-- Search Section -->
-    <section class="container mt-5">
-        <h1 class="title text-center fw-bold">🔍COUNTRY INFO.</h1>
-        <div class="input-group mb-3">
-            <input class="form-control" type="text" placeholder="Search a Country" id="searchInput">
-            <button class="btn btn-success" type="button" id="searchCountry">Search</button>
+    <div class="main-bg container mt-5 pb-5 rounded-3">
+        <!-- Search Section -->
+        <section class="container mt-5">
+            <h1 class="title text-center fw-bold text-white" >EXPLORE A NATION</h1>
+            <div class="input-bg input-group mb-3 shadow  ">
+                <input class="form-control" list="listCountries" type="text" placeholder="Search a Country" id="searchInput">
+                <button class="btn btn-white border border-white text-white" type="button" id="searchCountry">Search</button>
+                <datalist id="listCountries">
+                    <option value="Philippines">
+                    <option value="Singapore">
+                    <option value="United Arab Emirates">
+                    <option value="China">
+                    <option value="Japan">
+                </datalist>
+            </div>
+        </section>
+
+        <!-- Main Area --Display the content -->
+        <main id="mainArea">
+
+        </main>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="countryNotFound" data-bs-backdrop="static" data-bs-keyboard="false" >
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body p-5 text-center">
+                    <h1 class="fw-bold" id="test">INVALID INPUT</h1>
+                    <p id="message">Country not found.</p>
+                    <h1 class="display-1 mt-2 fw-bold" id="correctNumber"></h1>
+                    <a href="index.html"><button type="button" class="btn btn-success" data-bs-dismiss="modal">Search Again</button></a>
+                </div>
+            </div>
         </div>
-    </section>
+    </div>
 
-    <!-- Main Area --Display the content -->
-    <main id="mainArea">
-
-    </main>
 
     <!-- Footer -->
     <footer class="text-center text-white fs-6 p-3 mt-auto ">Developed by <strong>Allen Nosares</strong></footer>
